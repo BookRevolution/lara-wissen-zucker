@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Versteckter Zucker: der 30-Sekunden-Check | Dr. Lara Vadlau</title>
+<meta name="description" content="Der Zucker-Guide von Dr. Lara Vadlau: wie du in 30 Sekunden erkennst, wie viel Zucker wirklich in einem Produkt steckt. Mit Ampel-Richtwerten, allen Tarnnamen und den größten Verstecken.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Lara Vadlau · Longevity Medicine">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Versteckter Zucker: der 30-Sekunden-Check">
+<meta property="og:description" content="Zutatenliste, Ampel-Richtwerte, Tarnnamen und Portionsfalle. So durchschaust du jedes Etikett.">
+<meta property="og:url" content="https://lara-zucker.vercel.app">
+<meta property="og:image" content="https://lara-zucker.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Versteckter Zucker: der 30-Sekunden-Check">
+<meta name="twitter:description" content="Zutatenliste, Ampel-Richtwerte, Tarnnamen und Portionsfalle. So durchschaust du jedes Etikett.">
+<meta name="twitter:image" content="https://lara-zucker.vercel.app/og.jpg">
+<link rel="canonical" href="https://lara-zucker.vercel.app">
+<meta name="theme-color" content="#0d131e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4af37;--gold-soft:#e6c86b;--dark:#141b28;--darker:#0d131e;
+  --panel:#1b2434;--panel-2:#212c40;--line:rgba(212,175,55,.18);
+  --text:#e8ecf3;--muted:#9aa6bb;--muted-2:#6f7c93;
+  --green:#5fbf8f;--amber:#e0a94a;--red:#d97a72;--maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--darker);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:500}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px}
+a{color:var(--gold-soft);text-decoration:none}
+a:hover{text-decoration:underline}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-soft));z-index:2000;transition:width .1s}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(13,19,30,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Fraunces',serif;font-size:19px;font-weight:600;letter-spacing:-.01em;color:#fff}
+.brand span{color:var(--gold)}
+nav.links{display:flex;gap:24px}
+nav.links a{color:var(--muted);font-size:13.5px;font-weight:500}
+nav.links a:hover{color:var(--gold);text-decoration:none}
+@media(max-width:900px){nav.links{display:none}}
+
+.hero{position:relative;padding:88px 0 70px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:680px;height:680px;background:radial-gradient(circle,rgba(212,175,55,.12) 0%,transparent 68%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-40%;left:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(217,122,114,.06) 0%,transparent 70%);pointer-events:none}
+.hero .container{position:relative;z-index:2}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,5.4vw,58px);line-height:1.08;letter-spacing:-.02em;color:#fff;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{margin-top:20px;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(17px,2.2vw,21px);color:var(--gold-soft)}
+.hero .lede{margin-top:22px;font-size:clamp(16px,2.1vw,19px);color:var(--muted);max-width:62ch;line-height:1.6}
+.hero .lede b{color:var(--text)}
+.byline{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:14px}
+.byline .avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;flex:none}
+.byline .avatar img{width:100%;height:100%;object-fit:cover}
+.byline b{color:var(--text)}
+
+section{padding:70px 0;border-top:1px solid rgba(255,255,255,.04)}
+.sec-head{max-width:64ch;margin-bottom:36px}
+.sec-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,3.6vw,38px);line-height:1.15;letter-spacing:-.01em;color:#fff}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:17px}
+
+.principle{margin-top:28px;background:var(--darker);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;color:var(--text);font-size:16px}
+.principle .l{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+
+/* checklist */
+.check{display:grid;gap:11px}
+.check .row{display:flex;gap:16px;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--gold);border-radius:13px;padding:18px 22px;align-items:flex-start;color:var(--muted);font-size:15px}
+.check .row::before{content:'✓';flex:none;width:24px;height:24px;border-radius:7px;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.check .row b{color:var(--text)}
+
+.honest{margin-top:16px;background:rgba(212,175,55,.06);border:1px solid var(--line);border-radius:12px;padding:18px 22px;font-size:14.5px;color:var(--text)}
+.honest b{color:var(--gold-soft)}
+
+/* ampel table */
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line)}
+.tbl{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.tbl th,.tbl td{padding:16px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+.tbl th{background:var(--panel-2);color:var(--gold);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.tbl tbody tr{background:var(--panel)}
+.tbl td.w{color:#fff;font-weight:600}
+.tbl td.g{color:var(--green);font-weight:700}
+.tbl td.a{color:var(--amber);font-weight:700}
+.tbl td.r{color:var(--red);font-weight:700}
+.tbl tr:last-child td{border-bottom:none}
+
+/* tarnname groups */
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.groups{grid-template-columns:1fr}}
+.grp{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.grp h4{font-family:'Fraunces',serif;font-size:19px;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:rgba(212,175,55,.08);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13.5px;color:var(--text)}
+
+/* claims */
+.claim{display:flex;gap:18px;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--amber);border-radius:14px;padding:20px 24px;align-items:flex-start;margin-bottom:12px}
+.claim .ic{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(224,169,74,.14);color:var(--amber);border:1px solid rgba(224,169,74,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-top:2px}
+.claim h4{font-size:16px;color:#fff;font-weight:600;margin-bottom:4px;font-style:italic}
+.claim p{color:var(--muted);font-size:14.5px}
+
+/* hideouts */
+.hideouts{display:flex;flex-wrap:wrap;gap:10px}
+.hideouts .h{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:10px 20px;font-size:14.5px;color:var(--text)}
+
+.callout{background:linear-gradient(135deg,rgba(212,175,55,.08),transparent);border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-top:22px}
+.callout .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.callout p{color:var(--text);font-size:16.5px}
+.callout p b{color:var(--gold-soft)}
+
+.quote{margin-top:34px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold-soft);max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.5}
+
+.book{background:linear-gradient(135deg,#241d10,#15110a);border:1px solid var(--line);border-radius:18px;padding:30px 34px;text-align:center;margin-top:24px}
+.book .l{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.book p{color:var(--text);font-size:16.5px;max-width:60ch;margin:0 auto;line-height:1.6}
+.book p b{color:var(--gold-soft)}
+
+.cta{background:linear-gradient(135deg,var(--panel),var(--darker));border:1px solid var(--line);border-radius:22px;padding:52px 44px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:520px;height:420px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%);pointer-events:none}
+.cta-photo{position:relative;width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--gold);box-shadow:0 12px 34px rgba(0,0,0,.45);margin:0 auto 22px;display:block}
+.cta h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,4vw,40px);color:#fff;position:relative;line-height:1.14}
+.cta p{color:var(--muted);max-width:54ch;margin:18px auto 0;position:relative;font-size:17px}
+.btn{display:inline-block;margin-top:30px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15.5px;padding:15px 34px;border-radius:999px;position:relative;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(212,175,55,.22)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(212,175,55,.32);text-decoration:none}
+.cta .socials{margin-top:26px;display:flex;gap:24px;justify-content:center;position:relative}
+.cta .socials a{color:var(--muted);font-size:13.5px;cursor:pointer}
+
+.disclaimer{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:22px 26px;color:var(--muted-2);font-size:13.5px;line-height:1.6}
+.disclaimer b{color:var(--muted)}
+footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted-2);font-size:13px}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+.hero-visual{margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.hero-visual img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,19,30,.05),rgba(13,19,30,.55));pointer-events:none}
+.band{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative}
+.band img{width:100%;display:block;aspect-ratio:21/9;object-fit:cover}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,19,30,.10),rgba(13,19,30,.60));pointer-events:none}
+
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.more{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.more{grid-template-columns:1fr}}
+.more a{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 22px;display:block;transition:border-color .2s,transform .2s;text-decoration:none}
+.more a:hover{border-color:var(--line);transform:translateY(-2px);text-decoration:none}
+.more a .t{display:block;font-family:'Fraunces',serif;font-size:18px;color:#fff;font-weight:500}
+.more a .d{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.more a .go{color:var(--gold);font-size:13px;margin-top:10px;display:block}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.tool-btn{background:transparent;border:1px solid var(--line);color:var(--gold-soft);font-size:13.5px;font-weight:500;padding:11px 20px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s}
+.tool-btn:hover{background:rgba(212,175,55,.08)}
+
+@media print{
+  @page{margin:16mm}
+  #progress,header,.nl-overlay,.tools,.hero-visual,.band,.cta,.more-sec,.chal,.book{display:none !important}
+  html,body{background:#fff !important;color:#111 !important}
+  body{font-size:11pt}
+  .reveal{opacity:1 !important;transform:none !important}
+  section{padding:10px 0 !important;border-top:none !important;break-inside:avoid}
+  .container{max-width:100% !important;padding:0 !important}
+  h1,h2,h3,h4,.brand{color:#111 !important}
+  .eyebrow,.principle .l,.callout .l,.tbl th{color:#8a6d1f !important}
+  p,li,.sec-head p,.claim p{color:#333 !important}
+  .check .row,.disclaimer,.principle,.honest,.grp,.claim,.callout,.tag,.hideouts .h{background:#fff !important;border:1px solid #ccc !important;box-shadow:none !important;color:#111 !important}
+  .tbl,.tbl-wrap{border-color:#bbb !important}
+  .tbl th{background:#f3f3f3 !important}
+  .tbl tbody tr{background:#fff !important}
+  .tbl td,.tbl th{border-color:#ddd !important}
+  .tbl td.w{color:#111 !important}
+  .hero .sub,.quote,.grp h4{color:#8a6d1f !important}
+  a{color:#111 !important;text-decoration:none !important}
+}
+
+.nl-overlay{position:fixed;inset:0;background:rgba(6,10,16,.72);backdrop-filter:blur(4px);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px}
+.nl-overlay.open{display:flex}
+.nl-modal{background:var(--panel);border:1px solid var(--line);border-radius:20px;max-width:440px;width:100%;padding:34px 32px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.nl-modal h3{font-family:'Fraunces',serif;font-weight:500;font-size:24px;color:#fff;margin-bottom:8px}
+.nl-modal p.intro{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.nl-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:26px;cursor:pointer;line-height:1;padding:4px}
+.nl-close:hover{color:var(--gold)}
+.nl-field{margin-bottom:14px}
+.nl-field label{display:block;font-size:12.5px;color:var(--gold);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.nl-field input{width:100%;background:var(--darker);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit}
+.nl-field input:focus{outline:none;border-color:var(--gold)}
+.nl-field .opt{color:var(--muted-2);text-transform:none;letter-spacing:0;font-weight:400}
+.nl-submit{width:100%;margin-top:8px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15px;padding:14px;border:none;border-radius:999px;cursor:pointer;transition:transform .2s}
+.nl-submit:hover{transform:translateY(-1px)}
+.nl-submit[disabled]{opacity:.6;cursor:default}
+.nl-note{margin-top:14px;font-size:11.5px;color:var(--muted-2);line-height:1.5}
+.nl-success{text-align:center;padding:16px 0}
+.nl-success .ok{font-size:44px;color:var(--green);line-height:1;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header>
+  <div class="container">
+    <div class="brand">Dr. Lara <span>Vadlau</span></div>
+    <nav class="links">
+      <a href="#liste">Zutatenliste</a>
+      <a href="#ampel">Die Ampel</a>
+      <a href="#tarnnamen">Tarnnamen</a>
+      <a href="#werbung">Werbeversprechen</a>
+      <a href="#verstecke">Verstecke</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-top:none">
+  <div class="container">
+    <div class="eyebrow reveal">Zucker-Guide · Vertiefung zum Reel</div>
+    <h1 class="reveal">Versteckter <em>Zucker</em>.</h1>
+    <p class="sub reveal">So erkennst du in 30 Sekunden, wie viel Zucker wirklich in einem Produkt steckt.</p>
+    <p class="lede reveal">Zucker steht selten dort, wo du ihn suchst. Er verteilt sich auf <b>Tarnnamen, aufgeteilte Zutaten und unrealistisch kleine Portionsangaben</b>. Mit diesen fünf Schritten durchschaust du jedes Etikett, direkt am Supermarktregal.</p>
+    <div class="byline reveal">
+      <div class="avatar"><img src="lara-avatar.jpg" alt="Dr. Lara Vadlau"></div>
+      <div>Von <b>Dr. Lara Vadlau</b> · Longevity Medicine</div>
+    </div>
+    <div class="tools reveal">
+      <button class="tool-btn" onclick="window.print()">Als PDF speichern oder drucken</button>
+      <button class="tool-btn" id="shareBtn">Link teilen</button>
+    </div>
+    <div class="hero-visual reveal"><img src="hero.webp" alt="Zuckerwürfel neben Joghurt, Müsli und Sauce" loading="eager"></div>
+  </div>
+</section>
+
+<!-- ZUTATENLISTE -->
+<section id="liste">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Schritt 1</div>
+      <h2>Die Zutatenliste von vorne lesen.</h2>
+    </div>
+    <div class="check">
+      <div class="row reveal"><span><b>Zutaten sind nach Menge sortiert:</b> Was vorne steht, ist am meisten drin.</span></div>
+      <div class="row reveal"><span><b>Steht Zucker (oder ein Tarnname) unter den ersten drei Zutaten,</b> ist das Produkt ein Zuckerprodukt.</span></div>
+      <div class="row reveal"><span><b>Faustregel:</b> Je länger die Zutatenliste, desto wahrscheinlicher versteckter Zucker.</span></div>
+    </div>
+    <div class="honest reveal"><b>Achtung, Trick:</b> Mehrere Zuckerarten werden oft aufgeteilt, damit jede einzeln weiter hinten landet. Zusammengezählt stünde Zucker oft ganz vorne.</div>
+  </div>
+</section>
+
+<!-- AMPEL -->
+<section id="ampel">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Schritt 2</div>
+      <h2>Die Nährwerttabelle: „davon Zucker" pro 100 g.</h2>
+      <p>Immer die 100-g-Spalte vergleichen, nicht die Portion. Das sind die Ampel-Richtwerte:</p>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <thead><tr><th></th><th>Wenig</th><th>Mittel</th><th>Viel</th></tr></thead>
+      <tbody>
+        <tr><td class="w">Lebensmittel (pro 100 g)</td><td class="g">bis 5 g</td><td class="a">5 bis 22,5 g</td><td class="r">über 22,5 g</td></tr>
+        <tr><td class="w">Getränke (pro 100 ml)</td><td class="g">bis 2,5 g</td><td class="a">2,5 bis 11,25 g</td><td class="r">über 11,25 g</td></tr>
+      </tbody>
+    </table></div>
+    <div class="honest reveal"><b>Hinweis:</b> „Davon Zucker" enthält auch natürlichen Zucker, zum Beispiel Milchzucker in Naturjoghurt (ca. 4 bis 5 g pro 100 g). Liegt ein Fruchtjoghurt bei 12 bis 15 g, ist der Rest meist zugesetzt.</div>
+  </div>
+</section>
+
+<!-- TARNNAMEN -->
+<section id="tarnnamen">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Schritt 3</div>
+      <h2>Tarnnamen erkennen.</h2>
+    </div>
+    <div class="groups">
+      <div class="grp reveal">
+        <h4>Alles auf „-ose"</h4>
+        <div class="tags"><span class="tag">Glukose</span><span class="tag">Fruktose</span><span class="tag">Saccharose</span><span class="tag">Dextrose</span><span class="tag">Maltose</span></div>
+      </div>
+      <div class="grp reveal">
+        <h4>Sirupe</h4>
+        <div class="tags"><span class="tag">Glukosesirup</span><span class="tag">Glukose-Fruktose-Sirup</span><span class="tag">Maissirup</span><span class="tag">Reissirup</span><span class="tag">Agavendicksaft</span><span class="tag">Ahornsirup</span></div>
+      </div>
+      <div class="grp reveal">
+        <h4>Aus Getreide</h4>
+        <div class="tags"><span class="tag">Maltodextrin</span><span class="tag">Malzextrakt</span><span class="tag">Gerstenmalz</span><span class="tag">Karamell</span></div>
+      </div>
+      <div class="grp reveal">
+        <h4>„Natürlich" klingend</h4>
+        <div class="tags"><span class="tag">Honig</span><span class="tag">Apfel-/Birnendicksaft</span><span class="tag">Fruchtsaftkonzentrat</span><span class="tag">Fruchtpulver</span><span class="tag">Traubensüße</span><span class="tag">Kokosblütenzucker</span><span class="tag">Rohrohrzucker</span><span class="tag">Invertzucker</span></div>
+      </div>
+    </div>
+    <div class="principle reveal" style="margin-top:22px">
+      <span class="l">Die Wahrheit dahinter</span>
+      Für den Körper ist das alles Zucker, egal wie gesund der Name klingt.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION IMAGE -->
+<section style="padding:0 0 8px;border-top:none">
+  <div class="container">
+    <div class="band reveal"><img src="sec.webp" alt="Zuckerwürfel-Pyramide mit Löffel voll Zucker" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- WERBEVERSPRECHEN -->
+<section id="werbung">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Schritt 4</div>
+      <h2>Werbeversprechen richtig lesen.</h2>
+    </div>
+    <div class="claim reveal"><div class="ic">!</div><div>
+      <h4>„Ohne Zuckerzusatz"</h4>
+      <p>Heißt nicht zuckerarm. Der eigene Fruchtzucker kann hoch sein: Säfte, Smoothies, Trockenobst.</p>
+    </div></div>
+    <div class="claim reveal"><div class="ic">!</div><div>
+      <h4>„Zuckerarm" und „zuckerfrei"</h4>
+      <p>„Zuckerarm" bedeutet maximal 5 g pro 100 g bzw. 2,5 g pro 100 ml. „Zuckerfrei" maximal 0,5 g pro 100 g bzw. 100 ml.</p>
+    </div></div>
+    <div class="claim reveal"><div class="ic">!</div><div>
+      <h4>„Light" und „fettarm"</h4>
+      <p>Oft wird fehlender Geschmack durch mehr Zucker ersetzt. Immer die Tabelle prüfen.</p>
+    </div></div>
+    <div class="claim reveal"><div class="ic">!</div><div>
+      <h4>„Mit Fruchtsüße", „natürlich gesüßt", „Protein", „Bio"</h4>
+      <p>Sagen alle nichts über die Zuckermenge aus.</p>
+    </div></div>
+
+    <div class="sec-head reveal" style="margin-top:56px">
+      <div class="eyebrow">Schritt 5</div>
+      <h2>Die Portionsfalle.</h2>
+    </div>
+    <div class="check">
+      <div class="row reveal"><span><b>Hersteller-Portionen sind oft unrealistisch klein</b> (zum Beispiel 30 g Müsli). Rechne mit deiner echten Menge.</span></div>
+      <div class="row reveal"><span><b>Umrechnen hilft:</b> 1 Stück Würfelzucker sind ca. 3 g. Ein Fruchtjoghurt mit 15 g Zucker pro Becher (150 g) entspricht ca. 5 Würfeln.</span></div>
+    </div>
+    <div class="callout reveal">
+      <div class="l">Zum Vergleich</div>
+      <p>Die WHO empfiehlt, freien Zucker unter 10 Prozent der Energie zu halten, idealerweise unter 5 Prozent. Das sind <b>rund 25 g pro Tag</b> bei 2.000 kcal, also etwa 8 Würfelzucker.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VERSTECKE -->
+<section id="verstecke">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Schritt 6</div>
+      <h2>Wo er sich besonders gern versteckt.</h2>
+    </div>
+    <div class="hideouts reveal">
+      <span class="h">Ketchup, Grill- und Fertigsaucen</span>
+      <span class="h">Salatdressings</span>
+      <span class="h">Fruchtjoghurt &amp; Quarkdesserts</span>
+      <span class="h">Müsli &amp; Granola</span>
+      <span class="h">Toast und abgepacktes Brot</span>
+      <span class="h">Wurst &amp; Fleischwaren</span>
+      <span class="h">Fertiggerichte &amp; Tiefkühlpizza</span>
+      <span class="h">Rotkraut &amp; Essiggurken im Glas</span>
+      <span class="h">Säfte &amp; Smoothies</span>
+      <span class="h">Eistee &amp; Kaffeegetränke</span>
+      <span class="h">Protein- und Müsliriegel</span>
+      <span class="h">Manche Haferdrinks</span>
+    </div>
+    <div class="honest reveal"><b>Sonderfall Haferdrinks:</b> Hier entsteht Zucker bei der Herstellung und steht oft gar nicht in der Zutatenliste. Der Blick auf „davon Zucker" verrät ihn trotzdem.</div>
+
+    <p class="quote reveal">„Die einfachste Regel: Je weniger verarbeitet, desto weniger versteckter Zucker. Was keine Zutatenliste braucht, hat auch keinen."</p>
+
+    <div class="book reveal">
+      <div class="l">Mehr dazu in meinem Buch</div>
+      <p>Warum wir Altern falsch verstehen und was du wirklich beeinflussen kannst: Das liest du in <a href="https://hi.switchy.io/10PTn" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:underline"><b>Die Alterslüge</b></a>.</p>
+      <a href="https://hi.switchy.io/10PTn" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:14.5px;padding:12px 26px;border-radius:999px;text-decoration:none;box-shadow:0 8px 22px rgba(212,175,55,.22)">Jetzt lesen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="start">
+  <div class="container">
+    <div class="cta reveal">
+      <img class="cta-photo" src="lara-portrait.jpg" alt="Dr. Lara Vadlau" loading="lazy">
+      <h2>Wissen, das jedes Etikett<br>in 30 Sekunden entlarvt.</h2>
+      <p>Ich baue jede Woche Reels und Vertiefungen wie diese: die Tricks der Industrie, ehrlich eingeordnet. Kein Hype, keine Panik, nur das, was dir beim Einkaufen wirklich hilft.</p>
+      <a class="btn" href="https://www.instagram.com/laravadlau/" target="_blank" rel="noopener">Folge für mehr auf Instagram →</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/laravadlau/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" data-nl-open>Newsletter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE GUIDES -->
+<section class="more-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Weitere Guides</div>
+      <h2>Mehr Longevity-Wissen.</h2>
+      <p>Alle Guides von Dr. Lara Vadlau, jederzeit nachlesbar.</p>
+    </div>
+    <div class="more reveal">
+      <a href="https://lara-mythen.vercel.app"><span class="t">Mythen</span><span class="d">10 Ernährungsmythen im Check</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-sport.vercel.app"><span class="t">Sport</span><span class="d">Starthilfe gegen den Schweinehund</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-herz.vercel.app"><span class="t">Herz</span><span class="d">Checkliste gegen stille Gefäßalterung</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-bio.vercel.app"><span class="t">Bio</span><span class="d">wo sich Bio wirklich lohnt</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-kueche.vercel.app"><span class="t">Küche</span><span class="d">4 Swaps, die Sinn machen</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-blutwerte.vercel.app"><span class="t">Blutwerte</span><span class="d">Optimalwerte-Checkliste</span><span class="go">Ansehen &rarr;</span></a>
+    </div>
+    <p style="margin-top:22px;color:var(--muted-2);font-size:13.5px">Alle Guides auf einen Blick: <a href="https://lara-wissen.vercel.app">lara-wissen.vercel.app</a></p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="disclaimer reveal">
+      <b>Wichtiger Hinweis.</b> Dieser Guide dient der allgemeinen Ernährungsinformation und ersetzt keine ärztliche oder ernährungsmedizinische Beratung. Richtwerte gelten für gesunde Erwachsene.
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE CTA -->
+<section class="chal" style="padding:0 0 26px">
+  <div class="container">
+    <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,rgba(212,175,55,.14),rgba(212,175,55,.03));border:1px solid var(--line);border-radius:18px;padding:26px 30px">
+      <div style="min-width:240px;flex:1">
+        <div style="font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:500">Du willst mehr?</div>
+        <div style="color:var(--muted);font-size:15px;margin-top:5px">Die <b style="color:var(--gold-soft)">30-Tage-Longevity-Challenge</b> gibt es jetzt im Angebot.</div>
+      </div>
+      <a href="https://hi.switchy.io/zFRA" target="_blank" rel="noopener" style="flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;white-space:nowrap;text-decoration:none;box-shadow:0 10px 26px rgba(212,175,55,.22)">Zur 30-Tage-Challenge &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Dr. Lara Vadlau · Longevity Medicine</div>
+    <div>Wissens-Vertiefung zum Reel · Keyword: <b style="color:var(--gold)">ZUCKER</b> · <a href="https://lara-wissen.vercel.app/impressum">Impressum</a> · <a href="https://lara-wissen.vercel.app/datenschutz">Datenschutz</a></div>
+  </div>
+</footer>
+
+<!-- NEWSLETTER MODAL -->
+<div class="nl-overlay" id="nlOverlay" role="dialog" aria-modal="true" aria-label="Newsletter-Anmeldung">
+  <div class="nl-modal">
+    <button class="nl-close" id="nlClose" aria-label="Schliessen">&times;</button>
+    <div id="nlForming">
+      <h3>Newsletter</h3>
+      <p class="intro">Longevity-Wissen, ehrlich eingeordnet. Kein Spam, jederzeit abbestellbar.</p>
+      <form id="nlForm" novalidate>
+        <div class="nl-field"><label for="nlName">Name</label><input id="nlName" name="name" type="text" required autocomplete="name"></div>
+        <div class="nl-field"><label for="nlEmail">E-Mail-Adresse</label><input id="nlEmail" name="email" type="email" required autocomplete="email"></div>
+        <div class="nl-field"><label for="nlPhone">Handynummer <span class="opt">(optional)</span></label><input id="nlPhone" name="phone" type="tel" autocomplete="tel"></div>
+        <button class="nl-submit" type="submit">Anmelden</button>
+        <p class="nl-note">Mit Klick auf „Anmelden" willigst du ein, dass deine Angaben zum Versand des Newsletters gespeichert und verarbeitet werden. Du kannst dich jederzeit über den Abmeldelink in jeder E-Mail wieder abmelden. Mehr dazu in der <a href="https://lara-wissen.vercel.app/datenschutz" target="_blank" rel="noopener" style="color:var(--gold-soft)">Datenschutzerklärung</a>.</p>
+      </form>
+    </div>
+    <div id="nlDone" class="nl-success" style="display:none">
+      <div class="ok">&#10003;</div>
+      <h3>Danke, du bist dabei!</h3>
+      <p class="intro">Wir haben deine Anmeldung erhalten.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100+'%';});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var ENDPOINT="https://script.google.com/macros/s/AKfycbxr7dsmt1WNeWHnz8ORkzMpfqTb0o7GfyZQCNAbmtPFQ9CBpt3sR93Pl4tDfr-BupeviA/exec";
+  var SOURCE="ZUCKER";
+  var ov=document.getElementById('nlOverlay');
+  if(!ov)return;
+  function open(e){if(e)e.preventDefault();ov.classList.add('open');setTimeout(function(){var n=document.getElementById('nlName');if(n)n.focus();},60);}
+  function close(){ov.classList.remove('open');}
+  document.querySelectorAll('[data-nl-open]').forEach(function(a){a.addEventListener('click',open);});
+  document.getElementById('nlClose').addEventListener('click',close);
+  ov.addEventListener('click',function(e){if(e.target===ov)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  document.getElementById('nlForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('nlName').value.trim();
+    var email=document.getElementById('nlEmail').value.trim();
+    var phone=document.getElementById('nlPhone').value.trim();
+    if(!name||!email){return;}
+    var btn=this.querySelector('.nl-submit');btn.disabled=true;btn.textContent='Wird gesendet...';
+    var body=new URLSearchParams({name:name,email:email,phone:phone,source:SOURCE}).toString();
+    var done=function(){document.getElementById('nlForming').style.display='none';document.getElementById('nlDone').style.display='block';};
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:body}).then(done).catch(done);
+  });
+})();
+(function(){
+  var b=document.getElementById('shareBtn'); if(!b) return;
+  b.addEventListener('click',async function(){
+    var d={title:document.title,url:location.href};
+    try{
+      if(navigator.share){await navigator.share(d);}
+      else{await navigator.clipboard.writeText(location.href); b.textContent='Link kopiert';setTimeout(function(){b.textContent='Link teilen';},2000);}
+    }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
